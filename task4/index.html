@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ TaskMaster Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container" data-theme="light">
+        <div class="app-header">
+            <h1>✨ TaskMaster Pro</h1>
+            <div class="theme-switch">
+                <input type="checkbox" id="themeToggle">
+                <label for="themeToggle" class="slider"></label>
+            </div>
+        </div>
+
+        <div class="app-content">
+            <div class="input-section">
+                <input type="text" id="taskInput" placeholder="✏️ Add new task...">
+                <input type="datetime-local" id="taskDateTime" min="" />
+                <button id="addBtn">➕ Add</button>
+            </div>
+
+            <div class="notification" id="notification"></div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">📋 All Tasks</button>
+                <button class="filter-btn" data-filter="active">⚡ Active</button>
+                <button class="filter-btn" data-filter="completed">✅ Completed</button>
+            </div>
+
+            <!-- ✅ Task List (Dynamically Generated) ✅ -->
+            <ul id="taskList"></ul>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
